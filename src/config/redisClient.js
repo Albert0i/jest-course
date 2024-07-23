@@ -2,7 +2,7 @@ import 'dotenv/config'
 import { Redis } from 'ioredis'
 
 const redisClient = new Redis({
-    port: 6379, // Redis port
+    port: 7000, // Redis port
     host: "127.0.0.1", // Redis host
   });
 
