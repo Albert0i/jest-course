@@ -1,0 +1,17 @@
+{
+  "name": "jest-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module", 
+  "scripts": {
+    "jest": "jest",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
