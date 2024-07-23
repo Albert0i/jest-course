@@ -92,5 +92,5 @@ test("spy on a method of a object", () => {
    How can I test that a function has not been called?
    https://stackoverflow.com/questions/24282390/how-can-i-test-that-a-function-has-not-been-called
 
-   npm test 
+   npm test -t sum 
 */
