@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module", 
   "scripts": {
-    "jest": "jest",
+    "redis": "start \"redis server\" /MIN redis-server ./redis/conf/redis.conf",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "keywords": [],
