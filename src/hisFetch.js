@@ -2,12 +2,14 @@ import sha256 from 'crypto-js/sha256';
 import { redisClient } from "./config/redisClient.js"
 
 const DEFAULT_NAMESPACE = "cache"
-const DEFAULT_TTL = 60  // seconds 
+const DEFAULT_TTL = 60    // seconds 
+const DEFAULT_DELAY = 0   // ms
 
 function hisFetch(url, options) {
     return new Promise( async (resolve, reject) => {
       const hash = sha256(url).toString()
       const value = await redisClient.get(`${DEFAULT_NAMESPACE}:${hash}`)
+
       if (value) { 
           // cache hit 
           let json = JSON.parse(value)
@@ -19,7 +21,7 @@ function hisFetch(url, options) {
         try {
           const response = await fetch(url, options)
           // imitate delay 10 ms
-          await new Promise(resolve => setTimeout(resolve, 10));
+          await new Promise(resolve => setTimeout(resolve, DEFAULT_DELAY));
 
           if (!response.ok) {
             throw new Error('Network response was not ok');
