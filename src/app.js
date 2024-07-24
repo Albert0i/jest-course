@@ -2,7 +2,7 @@ import express from 'express';
 import { redisClient } from './config/redisClient.js';
 import jsonServer from 'json-server';
 import swaggerUi from 'swagger-ui-express';
-import swaggerDocument from './swagger.json';
+import swaggerDocument from './swagger.json' assert { type: "json" };
 
 const port = 3000;
 
