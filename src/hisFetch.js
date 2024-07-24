@@ -1,3 +1,8 @@
+import sha256 from 'crypto-js/sha256';
+import { redisClient } from "./config/redisClient.js"
+
+const DEFAULT_NAMESPACE = "cache:"
+const DEFAULT_TTL = 60  // seconds 
 
 function myFetch(url, options) {
     return new Promise((resolve, reject) => {
@@ -16,6 +21,28 @@ function myFetch(url, options) {
         });
     });
   } 
+
+  async function myFetch2(url, options) {
+    return new Promise((resolve, reject) => {
+      fetch(url, options)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json(); // Parse the JSON data
+        })
+        .then(data => {
+          resolve(data); // Resolve the Promise with the retrieved data
+        })
+        .catch(error => {
+          reject(error); // Reject the Promise with the error
+        });
+    });
+  } 
+
+function calculateSHA256(inputString) {
+  return sha256(inputString).toString();
+}
 
 export { myFetch }
 
