@@ -1,50 +1,42 @@
 import sha256 from 'crypto-js/sha256';
 import { redisClient } from "./config/redisClient.js"
 
-const DEFAULT_NAMESPACE = "cache:"
+const DEFAULT_NAMESPACE = "cache"
 const DEFAULT_TTL = 60  // seconds 
 
-function myFetch(url, options) {
-    return new Promise((resolve, reject) => {
-      fetch(url, options)
-        .then(response => {
+function hisFetch(url, options) {
+    return new Promise( async (resolve, reject) => {
+      const hash = sha256(url).toString()
+      const value = await redisClient.get(`${DEFAULT_NAMESPACE}:${hash}`)
+      if (value) { 
+          // cache hit 
+          let json = JSON.parse(value)
+          json['cache'] = 'hit'
+          resolve(json) 
+        }
+      else {
+        // cache miss 
+        try {
+          const response = await fetch(url, options)
+          // imitate delay 
+          await new Promise(resolve => setTimeout(resolve, 10));
+
           if (!response.ok) {
             throw new Error('Network response was not ok');
+          } else {
+            let data = await response.json()
+            await redisClient.set(`${DEFAULT_NAMESPACE}:${hash}`, JSON.stringify(data), 'EX', DEFAULT_TTL)
+            data['cache'] = 'miss'
+            resolve(data) // Resolve the Promise with the retrieved data
           }
-          return response.json(); // Parse the JSON data
-        })
-        .then(data => {
-          resolve(data); // Resolve the Promise with the retrieved data
-        })
-        .catch(error => {
-          reject(error); // Reject the Promise with the error
-        });
+        } catch (error) {
+          reject(error) // Reject the Promise with the error
+        }
+      }
     });
   } 
 
-  async function myFetch2(url, options) {
-    return new Promise((resolve, reject) => {
-      fetch(url, options)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.json(); // Parse the JSON data
-        })
-        .then(data => {
-          resolve(data); // Resolve the Promise with the retrieved data
-        })
-        .catch(error => {
-          reject(error); // Reject the Promise with the error
-        });
-    });
-  } 
-
-function calculateSHA256(inputString) {
-  return sha256(inputString).toString();
-}
-
-export { myFetch }
+export { hisFetch }
 
 /*
    crypto-js

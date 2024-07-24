@@ -1,6 +1,6 @@
 import { myFetch } from "../src/myFetch.js"
 
-test("fetch post 66 with myFetch", async () => {
+test("fetch post 66 with myFetch", () => {
   const post = {
     userId: 7,
     id: 66,

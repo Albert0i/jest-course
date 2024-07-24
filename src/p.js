@@ -1,6 +1,6 @@
 
 function p1(str) {
-    return new Promise( (resolve, reject) => {
+    return new Promise( async (resolve, reject) => {
         if (str === "bingo")
             resolve(str)
         else 
