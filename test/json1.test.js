@@ -8,7 +8,7 @@ test("fetch post 66", async () => {
       }
     const response = await fetch('http://localhost:3000/66')
     const json = await response.json()
-    expect(json).toEqual(post)
+    expect(json).toEqual(post)    
 })
 
 test("fetch 100 posts", async () => {
