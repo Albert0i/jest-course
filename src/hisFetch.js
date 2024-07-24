@@ -18,7 +18,7 @@ function hisFetch(url, options) {
         // cache miss 
         try {
           const response = await fetch(url, options)
-          // imitate delay 
+          // imitate delay 10 ms
           await new Promise(resolve => setTimeout(resolve, 10));
 
           if (!response.ok) {
