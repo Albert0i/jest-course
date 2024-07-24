@@ -8,7 +8,7 @@ test.skip("fetch post 66 with hisFetch - miss", () => {
     body: "officia veritatis tenetur vero qui itaque\nsint non ratione\nsed et ut asperiores iusto eos molestiae nostrum\nveritatis quibusdam et nemo iusto saepe",
     cache: 'miss'
     }
-  // const json = await myFetch('http://localhost:3000/66')
+  // const json = await hisFetch('http://localhost:3000/66')
   // expect(json).toEqual(post)
   expect(hisFetch('http://localhost:3000/66', { cache: 'no-store' })).resolves.toEqual(post)
 })
@@ -21,13 +21,13 @@ test.skip("fetch post 66 with hisFetch - hit", () => {
     body: "officia veritatis tenetur vero qui itaque\nsint non ratione\nsed et ut asperiores iusto eos molestiae nostrum\nveritatis quibusdam et nemo iusto saepe",
     cache: 'hit'
     }
-  // const json = await myFetch('http://localhost:3000/66')
+  // const json = await hisFetch('http://localhost:3000/66')
   // expect(json).toEqual(post)
   expect(hisFetch('http://localhost:3000/66', { cache: 'no-store' })).resolves.toEqual(post)
 })
 
 
-test("fetch 100 posts with myFetch", async () => {
+test("fetch 100 posts with hisFetch", async () => {
   // Time matters... 
   let json 
   for (let j=1; j <=100; j++) {
