@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "dev": "nodemon src/app.js",
     "json-server": "start \"json server\" /MIN json-server ./data/posts.json",
     "redis": "start \"redis server\" /MIN redis-server ./redis/conf/redis.conf",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
@@ -15,7 +16,8 @@
   "dependencies": {
     "crypto-js": "^4.2.0",
     "dotenv": "^16.4.5",
-    "ioredis": "^5.4.1"
+    "ioredis": "^5.4.1",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "jest": "^29.7.0",
