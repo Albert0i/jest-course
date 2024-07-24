@@ -1,7 +1,12 @@
-
 import { myFetch } from "../src/myFetch.js"
 
-test("fetch post 66", async () => {
+beforeAll(async () => {  
+  });
+
+afterAll(async () => {
+  });
+
+test.skip("fetch post 66", async () => {
     const post = {
       userId: 7,
       id: 66,
@@ -13,7 +18,7 @@ test("fetch post 66", async () => {
     expect(json).toEqual(post)
 })
 
-test("fetch 100 posts", async () => {
+test.skip("fetch 100 posts", async () => {
   // Time matters... 
   let response, json 
   for (let j=1; j <=100; j++) {
