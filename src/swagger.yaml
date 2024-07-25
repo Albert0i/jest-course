@@ -93,6 +93,28 @@ paths:
                     type: string
                     example: Post body 
 
+components:
+  schemas:
+    post:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 66
+        userId:
+          type: integer
+          example: 11
+        title: 
+          type: string
+          example: Post title
+        body:
+          type: string
+          example: Post body 
+    
+    posts:
+      type: array
+      items:
+        $ref: "#/components/schemas/post"
 #
 # Swagger Editor  
 # https://editor.swagger.io/
