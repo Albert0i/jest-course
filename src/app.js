@@ -9,7 +9,7 @@ const port = 3000;
 
 // Create a JSON Server instance
 const server = jsonServer.create();
-const router = jsonServer.router('db.json');
+const router = jsonServer.router('data/db.json');
 const middlewares = jsonServer.defaults();
 
 // Middleware to check Redis cache before hitting JSON Server
