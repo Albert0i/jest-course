@@ -2,8 +2,7 @@ import express from 'express';
 // import { redisClient } from './config/redisClient.js';
 import jsonServer from 'json-server';
 import swaggerUi from 'swagger-ui-express';
-import YAML from 'yamljs'
-//import swaggerDocument from './swagger.json' assert { type: "json" };
+import swaggerDocument from './swagger.json' assert { type: "json" };
 
 const port = 3000;
 
@@ -35,14 +34,10 @@ server.use(router);
 
 // Swagger UI setup
 const app = express();
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Mount the JSON Server at /api
 app.use('/api', server);
-
-// app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-/* set up swagger in the root */
-const swaggerDocument = YAML.load('./src/swagger.yaml')
-app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
 // Start the combined server
 app.listen(port, () => {
