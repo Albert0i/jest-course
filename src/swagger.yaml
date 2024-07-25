@@ -21,21 +21,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array 
-                items:
-                  properties:
-                    id:
-                      type: integer
-                      example: 66
-                    userId:
-                      type: integer
-                      example: 11
-                    title: 
-                      type: string
-                      example: Post title
-                    body:
-                      type: string
-                      example: Post body 
+                  $ref: "#/components/schemas/posts"
 
     post:
       description: Add a new post
@@ -43,24 +29,13 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              properties:
-                    userId:
-                      type: integer
-                      example: 11
-                    title: 
-                      type: string
-                      example: New post title
-                    body:
-                      type: string
-                      example: New post body 
+              $ref: "#/components/schemas/post_main" 
       responses:
         201: 
           description: Post successfully added 
 
 # GET    /posts/:id
 # PUT    /posts/:id
-# PATCH  /posts/:id
 # DELETE /posts/:id
   /api/posts/{id}:
     get: 
@@ -78,29 +53,19 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  id:
-                    type: integer
-                    example: 66
-                  userId:
-                    type: integer
-                    example: 11
-                  title: 
-                    type: string
-                    example: Post title
-                  body:
-                    type: string
-                    example: Post body 
+                $ref: "#/components/schemas/post"
 
 components:
   schemas:
-    post:
+    post_id:
       type: object
       properties:
         id:
           type: integer
           example: 66
+    post_main:
+      type: object
+      properties:
         userId:
           type: integer
           example: 11
@@ -109,7 +74,26 @@ components:
           example: Post title
         body:
           type: string
-          example: Post body 
+          example: Post body     
+    post:
+      allOf:
+        - $ref: "#/components/schemas/post_id"
+        - $ref: "#/components/schemas/post_main"
+
+      # type: object
+      # properties:
+      #   id:
+      #     type: integer
+      #     example: 66
+      #   userId:
+      #     type: integer
+      #     example: 11
+      #   title: 
+      #     type: string
+      #     example: Post title
+      #   body:
+      #     type: string
+      #     example: Post body 
     
     posts:
       type: array

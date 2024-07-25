@@ -39617,6 +39617,12 @@
       "title": "New post title",
       "body": "New post body",
       "id": 102
+    },
+    {
+      "userId": 33,
+      "title": "Post title (new 103)",
+      "body": "Post body (new 103)",
+      "id": 103
     }
   ],
   "todos": [
