@@ -74,7 +74,7 @@ servers:
 . . .   
 ```
 
-To run the combined server with: 
+To run the combined server: 
 ```
 npm run dev 
 ```
