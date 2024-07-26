@@ -64,6 +64,19 @@ paths:
         200: 
           description: Post successfully updated
 
+    # patch: 
+    #   description: Update a post
+    #   parameters: 
+    #     - $ref: "#/components/parameters/post_id"
+    #   requestBody:
+    #     content:
+    #       application/json:
+    #         schema:
+    #           $ref: "#/components/schemas/post_main" 
+    #   responses:
+    #     200: 
+    #       description: Post successfully updated
+
     delete: 
       description: Delete a post
       parameters: 

@@ -11,7 +11,7 @@ const app = express();
 // Create a JSON Server instance
 const server = jsonServer.create();
 const router = jsonServer.router('data/db.json');
-const middlewares = jsonServer.defaults();
+const middlewares = jsonServer.defaults({ logger: false }); // Disable logging
 
 server.use(middlewares);
 server.use(router);
@@ -82,5 +82,5 @@ app.listen(port, () => {
     client.set('/posts', JSON.stringify([{ "id": 1, "title": "Cached Post" }]));
 
     // Close Redis connection
-    client.quit();
+    client.quit();    
 */

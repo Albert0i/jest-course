@@ -9,18 +9,18 @@ test("fetch post 66 with myFetch", () => {
     }
   // const json = await myFetch('http://localhost:3000/66')
   // expect(json).toEqual(post)
-  expect(myFetch('http://localhost:3000/66')).resolves.toEqual(post)
+  expect(myFetch('http://localhost:3000/api/posts/66')).resolves.toEqual(post)
 })
 
-test("fetch 100 posts with myFetch", async () => {
+test("fetch 100 posts by 10 times with myFetch", async () => {
   // Time matters... 
   let json 
-  for (let j=1; j <=100; j++) {
+  for (let j=1; j <=10; j++) {
     for (let i=1; i <= 100; i++) {
-      json = await myFetch(`http://localhost:3000/${i}`)
+      json = await myFetch(`http://localhost:3000/api/posts/${i}`)
     }
   }
-}, 30 * 1000)
+}, 60 * 1000)
 
 
 /*

@@ -1,34 +1,30 @@
-import sha256 from 'crypto-js/sha256';
 import { redisClient } from "./config/redisClient.js"
 
 const DEFAULT_NAMESPACE = "cache"
+const DEFAULT_STATUS = 'cacheStatus'
 const DEFAULT_TTL = 60    // seconds 
-const DEFAULT_DELAY = 0   // ms
 
 function hisFetch(url, options) {
     return new Promise( async (resolve, reject) => {
-      const hash = sha256(url).toString()
-      const value = await redisClient.get(`${DEFAULT_NAMESPACE}:${hash}`)
+      const value = await redisClient.get(`${DEFAULT_NAMESPACE}:${url}`)
 
       if (value) { 
           // cache hit 
           let json = JSON.parse(value)
-          json['cache'] = 'hit'
+          json[DEFAULT_STATUS] = 'hit'
           resolve(json) 
         }
       else {
         // cache miss 
         try {
-          const response = await fetch(url, options)
-          // imitate delay in ms
-          await new Promise(resolve => setTimeout(resolve, DEFAULT_DELAY));
+          const response = await fetch(url, options)          
 
           if (!response.ok) {
             throw new Error('Network response was not ok');
           } else {
             let data = await response.json()
-            await redisClient.set(`${DEFAULT_NAMESPACE}:${hash}`, JSON.stringify(data), 'EX', DEFAULT_TTL)
-            data['cache'] = 'miss'
+            await redisClient.set(`${DEFAULT_NAMESPACE}:${url}`, JSON.stringify(data), 'EX', DEFAULT_TTL)
+            data[DEFAULT_STATUS] = 'miss'
             resolve(data) // Resolve the Promise with the retrieved data
           }
         } catch (error) {
