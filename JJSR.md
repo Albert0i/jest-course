@@ -122,6 +122,12 @@ export { myFetch }
 
 
 #### III. Redis 
+To start the Redis Server:
+```
+npm run redis
+```
+![alt redis](img/redis.JPG)
+
 redisClient.js
 ```
 import { Redis } from 'ioredis'
