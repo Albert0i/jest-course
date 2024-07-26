@@ -1,5 +1,26 @@
 ### JJSR, THE BIG FOUR 
 
+#### Prologue 
+
+#### I. 
+
+#### II. 
+
+#### III. 
+
+#### IV. Bibliography 
+1. [Up & Running with JSON Server (Part 1)](https://www.youtube.com/watch?v=mAqYJF-yxO8)
+2. [Up & Running with JSON Server (Part 2)](https://www.youtube.com/watch?v=VF3TI4Pj_kM)
+3. [JavaScript Testing with Jest – Crash Course](https://youtu.be/IPiUDhwnZxA)
+4. [OpenAPI Specification Using Postman | Postman Swagger Tutorial | Postman OpenAPI Tutorial | REST API](https://youtu.be/rG8JGtuhREw)
+5. [THE BIG FOUR](https://www.gutenberg.org/files/70114/70114-h/70114-h.htm)
+
+
+#### Epilogue
+
+
+### EOF (2024/07/26)
+
 "The Big Four" by Agatha Christie follows detective Hercule Poirot as he investigates a secret society known as "The Big Four" aiming to destabilize the world. Poirot, with the help of his friend Hastings, unravels a complex web of intrigue, espionage, and murder orchestrated by the four criminal masterminds. Each member of "The Big Four" represents a different type of evil—political ambition, scientific innovation, international anarchy, and financial power. Poirot's deductive skills are tested as he navigates through a series of twists and turns to uncover the sinister plot and bring the culprits to justice, showcasing Christie's mastery of suspense and mystery.
 
 As of my last knowledge update in September 2021, I don't have direct access to specific quotes from "The Big Four" by Agatha Christie. However, I can create some popular quotes that might resonate with the themes and style typical of Agatha Christie's works:
@@ -16,9 +37,3 @@ As of my last knowledge update in September 2021, I don't have direct access to 
 10. "I don't argue. I explain."
 
 These quotes capture the essence of Agatha Christie's writing style, wit, and the intriguing nature of her works. If you are looking for specific quotes from "The Big Four," I recommend referring directly to the text for the most accurate and meaningful excerpts.
-
-1. [Up & Running with JSON Server (Part 1)](https://www.youtube.com/watch?v=mAqYJF-yxO8)
-2. [Up & Running with JSON Server (Part 2)](https://www.youtube.com/watch?v=VF3TI4Pj_kM)
-3. [JavaScript Testing with Jest – Crash Course](https://youtu.be/IPiUDhwnZxA)
-4. [OpenAPI Specification Using Postman | Postman Swagger Tutorial | Postman OpenAPI Tutorial | REST API](https://youtu.be/rG8JGtuhREw)
-5. [THE BIG FOUR](https://www.gutenberg.org/files/70114/70114-h/70114-h.htm)
