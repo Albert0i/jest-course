@@ -5,6 +5,38 @@ Few deeds are committed by underdogs. Real world issues become increasingly comp
 
 
 #### I. Basic setup 
+app.js
+```
+import express from 'express';
+import jsonServer from 'json-server';
+import swaggerUi from 'swagger-ui-express';
+import YAML from 'yamljs'
+
+const port = 3000;
+
+// Create express app
+const app = express();
+
+// Create a JSON Server instance
+const server = jsonServer.create();
+const router = jsonServer.router('data/db.json');
+const middlewares = jsonServer.defaults({ logger: false }); // Disable logging
+
+server.use(middlewares);
+server.use(router);
+
+// Mount the JSON Server at /api
+app.use('/api', server);
+
+// set up Swagger UI in the root 
+const swaggerDocument = YAML.load('./src/swagger.yaml')
+app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+
+// Start the combined server
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+});
+```
 
 
 #### II. myFetch
