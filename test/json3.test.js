@@ -1,4 +1,12 @@
 import { hisFetch } from "../src/hisFetch.js"
+import { disconnect } from "../src/config/redisClient.js";
+
+beforeAll(async () => {    
+});
+
+afterAll(async () => {
+  await disconnect()
+});
 
 test.skip("fetch post 66 with hisFetch - miss", () => {
   const post = {
@@ -8,8 +16,6 @@ test.skip("fetch post 66 with hisFetch - miss", () => {
     body: "officia veritatis tenetur vero qui itaque\nsint non ratione\nsed et ut asperiores iusto eos molestiae nostrum\nveritatis quibusdam et nemo iusto saepe",
     cacheStatus: 'miss'
     }
-  // const json = await hisFetch('http://localhost:3000/66')
-  // expect(json).toEqual(post)
   expect(hisFetch('http://localhost:3000/api/posts/66', { cache: 'no-store' })).resolves.toEqual(post)
 })
 
@@ -21,8 +27,6 @@ test.skip("fetch post 66 with hisFetch - hit", () => {
     body: "officia veritatis tenetur vero qui itaque\nsint non ratione\nsed et ut asperiores iusto eos molestiae nostrum\nveritatis quibusdam et nemo iusto saepe",
     cacheStatus: 'hit'
     }
-  // const json = await hisFetch('http://localhost:3000/66')
-  // expect(json).toEqual(post)
   expect(hisFetch('http://localhost:3000/api/posts/66', { cache: 'no-store' })).resolves.toEqual(post)
 })
 

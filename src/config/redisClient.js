@@ -5,7 +5,11 @@ const redisClient = new Redis({
     host: "127.0.0.1", // Redis host
   });
 
-export { redisClient }
+const disconnect = () => {
+  redisClient.disconnect()
+}
+
+export { redisClient, disconnect }
 
 /*
    Node-Redis
