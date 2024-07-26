@@ -44,7 +44,6 @@ app.listen(port, () => {
 
 Sample data are [100 posts](https://jsonplaceholder.typicode.com/posts) acquired from [{JSON} Placeholder](https://jsonplaceholder.typicode.com/).
 
-
 Based on the example db.json, the following routes are provided by json-server:
 ```
 GET    /posts
@@ -56,6 +55,8 @@ DELETE /posts/:id
 ```
 
 Thereupon, an [OpenAPI Specification](https://swagger.io/specification/) is created, either online [Swagger Editor](https://editor.swagger.io/) or [VSCode](https://code.visualstudio.com/) with [OpenAPI (Swagger) Editor](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi) extension will do. 
+
+![alt swagger editor](img/SwaggerEditor.JPG)
 
 swagger.yaml
 ```
@@ -72,6 +73,21 @@ servers:
   - url: http://127.0.0.1:3000
 . . .   
 ```
+
+To run the combined server with: 
+```
+npm run dev 
+```
+
+![alt npm-run-dev](img/npm-run-dev.JPG)
+
+And navigate to:
+```
+http://localhost:3000/
+```
+![alt swagger-ui-1](img/swagger-ui-1.JPG)
+
+![alt swagger-ui-2](img/swagger-ui-2.JPG)
 
 
 #### II. myFetch
