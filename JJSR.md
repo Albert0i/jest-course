@@ -6,7 +6,7 @@ Few deeds are committed by underdogs. Real world issues become increasingly comp
 The basic here is to showcase the tying up of packages. 
 
 
-#### I. Basic setup 
+#### I. Server setup 
 The first step is to combine [json-serverJ](https://github.com/typicode/json-server) and [Swagger UI](https://www.npmjs.com/package/swagger-ui-express) into a single server. 
 
 app.js
