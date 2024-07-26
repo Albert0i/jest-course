@@ -1,25 +1,36 @@
-### JJSR, THE BIG FOUR 
+### [J](https://github.com/typicode/json-server)[J](https://github.com/jestjs/jest)[S](https://www.npmjs.com/package/swagger-ui-express)[R](https://github.com/redis/redis)
 
 #### Prologue 
+Chances are rare when great deeds are committed by an unprominent underdog. Things are getting more and more intriguing when multiple factors are involved. 
 
-#### I. 
 
-#### II. 
+#### I. Basic setup 
 
-#### III. 
 
-#### IV. Bibliography 
+#### II. myFetch
+
+
+#### III. hisFetch 
+
+
+#### IV. The metrics
+
+
+#### V. Bibliography 
 1. [Up & Running with JSON Server (Part 1)](https://www.youtube.com/watch?v=mAqYJF-yxO8)
 2. [Up & Running with JSON Server (Part 2)](https://www.youtube.com/watch?v=VF3TI4Pj_kM)
-3. [JavaScript Testing with Jest – Crash Course](https://youtu.be/IPiUDhwnZxA)
-4. [OpenAPI Specification Using Postman | Postman Swagger Tutorial | Postman OpenAPI Tutorial | REST API](https://youtu.be/rG8JGtuhREw)
-5. [THE BIG FOUR](https://www.gutenberg.org/files/70114/70114-h/70114-h.htm)
+3. [{JSON} Placeholder](https://jsonplaceholder.typicode.com/)
+4. [JavaScript Testing with Jest – Crash Course](https://youtu.be/IPiUDhwnZxA)
+5. [Jest API](https://jestjs.io/docs/api)
+6. [OpenAPI Specification Using Postman | Postman Swagger Tutorial | Postman OpenAPI Tutorial | REST API](https://youtu.be/rG8JGtuhREw)
+7. [OpenAPI Specification, Version 3.1.0](https://swagger.io/specification/)
+8. [THE BIG FOUR](https://www.gutenberg.org/files/70114/70114-h/70114-h.htm)
 
 
 #### Epilogue
 
 
-### EOF (2024/07/26)
+### EOF (2024/08/02)
 
 "The Big Four" by Agatha Christie follows detective Hercule Poirot as he investigates a secret society known as "The Big Four" aiming to destabilize the world. Poirot, with the help of his friend Hastings, unravels a complex web of intrigue, espionage, and murder orchestrated by the four criminal masterminds. Each member of "The Big Four" represents a different type of evil—political ambition, scientific innovation, international anarchy, and financial power. Poirot's deductive skills are tested as he navigates through a series of twists and turns to uncover the sinister plot and bring the culprits to justice, showcasing Christie's mastery of suspense and mystery.
 

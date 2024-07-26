@@ -14,11 +14,11 @@
   "license": "ISC",
   "dependencies": {
     "ioredis": "^5.4.1",
+    "json-server": "^0.17.4",
     "swagger-ui-express": "^5.0.1",
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
-    "jest": "^29.7.0",
-    "json-server": "^0.17.4"
+    "jest": "^29.7.0"
   }
 }
