@@ -183,6 +183,20 @@ export { hisFetch }
 
 
 #### V. The metrics
+```
+npm test -t json1
+```
+![alt json1](img/json1.JPG)
+
+```
+npm test -t json2
+```
+![alt json2](img/json2.JPG)
+
+```
+npm test -t json3
+```
+![alt json3](img/json3.JPG)
 
 
 #### VI. Bibliography 
