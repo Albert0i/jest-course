@@ -84,10 +84,14 @@ npm run dev
 And navigate to:
 ```
 http://localhost:3000/
+
+http://localhost:3000/api
 ```
 ![alt swagger-ui-1](img/swagger-ui-1.JPG)
 
 ![alt swagger-ui-2](img/swagger-ui-2.JPG)
+
+![alt json-server](img/json-server.JPG)
 
 
 #### II. myFetch
