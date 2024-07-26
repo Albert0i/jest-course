@@ -1,7 +1,7 @@
 # [J](https://github.com/typicode/json-server)[J](https://github.com/jestjs/jest)[S](https://www.npmjs.com/package/swagger-ui-express)[R](https://github.com/redis/redis)
 
 #### Prologue 
-Chances are rare when great deeds are committed by an unprominent underdog. Things are getting intriguingly worse as multiple parties involved, little tools are envisaged and applied ingeniously to solve issue of a kind. 
+Chances are rare when great deeds are committed by unprominent underdog. Real world things are getting intriguingly worse when multiple parties involved, little tools are envisaged and applied ingeniously to solve issue of a kind. 
 
 
 #### I. Basic setup 
