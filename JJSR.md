@@ -44,7 +44,7 @@ app.listen(port, () => {
 
 Sample data are [100 posts](https://jsonplaceholder.typicode.com/posts) acquired from [{JSON} Placeholder](https://jsonplaceholder.typicode.com/).
 
-Based on the example db.json, the following routes are provided by json-server:
+Based on the example `db.json`, the following routes are provided by json-server:
 ```
 GET    /posts
 GET    /posts/:id
