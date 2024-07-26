@@ -3,8 +3,12 @@
 #### Prologue 
 Few deeds are committed by underdogs. Real world issues become increasingly complicated when multiple parties are involved. While tools of various kind are envisaged and applied ingeniously to solve problem of a kind independently, combining and working together is quite another thing. 
 
+The basic here is to showcase the tying up of packages. 
 
-#### I. A combined server
+
+#### I. Basic setup 
+The first step is to combine [json-serverJ](https://github.com/typicode/json-server) and [Swagger UI](https://www.npmjs.com/package/swagger-ui-express) into a combined server. 
+
 app.js
 ```
 import express from 'express';
@@ -38,6 +42,37 @@ app.listen(port, () => {
 });
 ```
 
+Sample data are [100 posts](https://jsonplaceholder.typicode.com/posts) acquired from [{JSON} Placeholder](https://jsonplaceholder.typicode.com/).
+
+
+Based on the example db.json, the following routes are provided by json-server:
+```
+GET    /posts
+GET    /posts/:id
+POST   /posts
+PUT    /posts/:id
+PATCH  /posts/:id
+DELETE /posts/:id
+```
+
+Thereupon, an [OpenAPI Specification](https://swagger.io/specification/) is created, either online [Swagger Editor](https://editor.swagger.io/) or [VSCode](https://code.visualstudio.com/) with [OpenAPI (Swagger) Editor](https://marketplace.visualstudio.com/items?itemName=42Crunch.vscode-openapi) extension will do. 
+
+swagger.yaml
+```
+openapi: 3.0.0
+info:
+  title: Posts API
+  description: Posts Demo API
+  contact:
+    name: Alberto Iong
+    email: albert0i@hotmail.com
+  version: 1.0.0
+servers: 
+  - url: http://localhost:3000
+  - url: http://127.0.0.1:3000
+. . .   
+```
+
 
 #### II. myFetch
 
@@ -54,7 +89,7 @@ app.listen(port, () => {
 3. [{JSON} Placeholder](https://jsonplaceholder.typicode.com/)
 4. [JavaScript Testing with Jest – Crash Course](https://youtu.be/IPiUDhwnZxA)
 5. [Jest API](https://jestjs.io/docs/api)
-6. [OpenAPI Specification Using Postman | Postman Swagger Tutorial | Postman OpenAPI Tutorial | REST API](https://youtu.be/rG8JGtuhREw)
+6. [OpenAPI 3.0 Tutorial| Swagger Tutorial For Beginners | Design REST API Using Swagger Editor](https://youtu.be/mViFmjcDOoA)
 7. [OpenAPI Specification, Version 3.1.0](https://swagger.io/specification/)
 8. [THE BIG FOUR](https://www.gutenberg.org/files/70114/70114-h/70114-h.htm)
 
