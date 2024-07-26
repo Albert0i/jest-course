@@ -121,7 +121,10 @@ export { myFetch }
 ```
 
 
-#### III. hisFetch 
+#### III. Redis 
+
+
+#### IV. hisFetch 
 hisFetch.js
 ```
 import { redisClient } from "./config/redisClient.js"
@@ -164,10 +167,10 @@ export { hisFetch }
 ```
 
 
-#### IV. The metrics
+#### V. The metrics
 
 
-#### V. Bibliography 
+#### VI. Bibliography 
 1. [Up & Running with JSON Server (Part 1)](https://www.youtube.com/watch?v=mAqYJF-yxO8)
 2. [Up & Running with JSON Server (Part 2)](https://www.youtube.com/watch?v=VF3TI4Pj_kM)
 3. [{JSON} Placeholder](https://jsonplaceholder.typicode.com/)
