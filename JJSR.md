@@ -7,7 +7,7 @@ The basic here is to showcase the tying up of packages.
 
 
 #### I. Basic setup 
-The first step is to combine [json-serverJ](https://github.com/typicode/json-server) and [Swagger UI](https://www.npmjs.com/package/swagger-ui-express) into a combined server. 
+The first step is to combine [json-serverJ](https://github.com/typicode/json-server) and [Swagger UI](https://www.npmjs.com/package/swagger-ui-express) into a single server. 
 
 app.js
 ```
