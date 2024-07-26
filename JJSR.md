@@ -122,6 +122,21 @@ export { myFetch }
 
 
 #### III. Redis 
+redisClient.js
+```
+import { Redis } from 'ioredis'
+
+const redisClient = new Redis({
+    port: 7000, // Redis port
+    host: "127.0.0.1", // Redis host
+  });
+
+const disconnect = () => {
+  redisClient.disconnect()
+}
+
+export { redisClient, disconnect }
+```
 
 
 #### IV. hisFetch 
