@@ -97,9 +97,71 @@ http://localhost:3000/api
 
 
 #### II. myFetch
+myFetch.js
+```
+function myFetch(url, options) {
+    return new Promise((resolve, reject) => {
+      fetch(url, options)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json(); // Parse the JSON data
+        })
+        .then(data => {
+          resolve(data); // Resolve the Promise with the retrieved data
+        })
+        .catch(error => {
+          reject(error); // Reject the Promise with the error
+        });
+    });
+  } 
+
+export { myFetch }
+```
 
 
 #### III. hisFetch 
+hisFetch.js
+```
+import { redisClient } from "./config/redisClient.js"
+
+const DEFAULT_NAMESPACE = "cache"
+const DEFAULT_STATUS = 'cacheStatus'
+const DEFAULT_TTL = 60    // seconds 
+
+function hisFetch(url, options) {
+    return new Promise( async (resolve, reject) => {
+      const value = await redisClient.get(`${DEFAULT_NAMESPACE}:${url}`)
+
+      if (value) { 
+          // cache hit 
+          let json = JSON.parse(value)
+          json[DEFAULT_STATUS] = 'hit'
+          resolve(json) 
+        }
+      else {
+        // cache miss 
+        try {
+          const response = await fetch(url, options)          
+
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          } else {
+            let data = await response.json()
+            await redisClient.set(`${DEFAULT_NAMESPACE}:${url}`, JSON.stringify(data), 'EX', DEFAULT_TTL)
+            data[DEFAULT_STATUS] = 'miss'
+            resolve(data) // Resolve the Promise with the retrieved data
+          }
+        } catch (error) {
+          reject(error) // Reject the Promise with the error
+        }
+      }
+    });
+  } 
+
+export { hisFetch }
+```
 
 
 #### IV. The metrics
