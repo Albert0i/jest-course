@@ -4,7 +4,7 @@
 Few deeds are committed by underdogs. Real world issues become increasingly complicated when multiple parties are involved. While tools of various kind are envisaged and applied ingeniously to solve problem of a kind independently, combining and working together is quite another thing. 
 
 
-#### I. Basic setup 
+#### I. A combined server
 app.js
 ```
 import express from 'express';
