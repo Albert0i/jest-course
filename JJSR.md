@@ -228,7 +228,7 @@ npm test -t json3
 
 A small talk on Data Propensity
 
-First of all, there is no such thing as Data Propensity! This term is *coined* by myself to indicate: data distribution, access pattern, change rate, lifespan and more... 
+First of all, there is no such thing as Data Propensity! The term is *coined* by myself to indicate data distribution, access pattern, change rate, data lifespan and more... 
 
 - Data distribution 
 
