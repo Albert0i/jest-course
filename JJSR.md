@@ -258,7 +258,6 @@ The update frequency. Some tables are updated more frequently than the others. T
 
 The birth and death of data. Not all data leads the same life and neither do we. Transient data has to be purged repeatedly and regularly. This hinge on scheduled job or user intervention. Typically, if reserved tickets can not be committed within five minutes, it will be cancelled and return to ticket pool. 
 
-#### All data are equal, but some data are more equal than others.  {style=text-transform:uppercase}
-
+> All data are equal, but some data are more equal than others.  
 
 ### EOF (2024/08/02)
