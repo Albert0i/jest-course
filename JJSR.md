@@ -261,7 +261,7 @@ The birth and death of data. Not all data leads the same life and neither do we.
 
 > All data are equal, but some data are more equal than others.  
 
-Data propensity does not have much to do with RDBMS, since nothing one can do with. In Redis, the story is different. One can choose the appropriate data structure for the data which makes the data model more complicated, and thus, more performant. 
+Data propensity does not have much to do with RDBMS, since nothing one can do with. In Redis, the story is different. One can choose the most appropriate data structure for one part of the data which makes the data model more complicated, and thus, more performant. 
 
 
 ### EOF (2024/08/02)
