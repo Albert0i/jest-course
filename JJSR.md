@@ -250,7 +250,7 @@ To foresee the search criteria and resort to table scan in certain circumstance 
 
 - Change rate 
 
-The update frequency. Some tables are updated more frequently than the others. Even in a Persons table, `birthday` field rarely changes; `name` and `sex` fields seldom change; `marital status` and `mobile` change from time to time. 
+The update frequency. Some tables are updated more frequently than the others. Transactional and CRUD data are subjected to different update cycle. Even in the same Persons table, `birthday` field rarely changes; `name` and `sex` fields seldom change; `marital status` and `mobile` change from time to time. 
 
 [Tablespaces](https://dev.mysql.com/doc/refman/8.4/en/innodb-tablespace.html) in RDBMS is all about managing storage and physical placement of tables. 
 
