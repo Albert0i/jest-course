@@ -238,7 +238,7 @@ The discrepant value of a field. ie. *male*, *female* in `gender` field; *cotton
 
 While table joining is an operation too important to be neglected and as yet it is an expensive operation, and therefore secondary index is created although it is not mandatory to do so. 
 
-Lastly, knowing the data distribution is a helpful in implementing *faceted search* in Redis. 
+Lastly, knowing the data distribution is helpful in implementing *faceted search* in Redis. 
 
 - Access pattern
 
