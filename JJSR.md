@@ -254,12 +254,11 @@ The update frequency. Some tables are updated more frequently than the others. E
 
 [Tablespaces](https://dev.mysql.com/doc/refman/8.4/en/innodb-tablespace.html) in RDBMS is all about managing storage and physical placement of tables. 
 
-All data are equal, but some data are more equal than others. 
-
 - Lifespan 
 
 The begin and end. Not all data leads the same life and neither do we. Transient data has to be purged repeatedly and regularly. This hinge on a scheduled job or user intervention. Typically, if reserved tickets can not be committed within five minutes, it will be cancelled and return to ticket pool. 
 
+All data are equal, but some data are more equal than others. 
 
 ### EOF (2024/08/02)
 
