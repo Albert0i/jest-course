@@ -266,7 +266,7 @@ In what ways the data is retrieved. In a Products table, there are `color`, `siz
 
 Indexes are disk files and required to build/rebuild on demand behind the scenes and always have cost of their own way. 
 
-To foresee the search criteria and resort to table scan in certain circumstance can cut down the number of indexes to some extend. 
+To foresee the search criteria and resort to table scan in certain circumstance can cut down the number of indexes to some extent. 
 
 - Change rate 
 
