@@ -242,11 +242,18 @@ Lastly, knowing the data distribution is helpful in implementing *faceted search
 
 - Access pattern
 
+In what ways the data is retrieved. In a Products table, there are `color`, `size` and `productOf` fields, to enable access to products via all combinations of keys, ie. 3P1 + 3P2 + 3P3, which is 15! As you can see the number of compound index increase exponential... 
+
+Indexes are disk files and required to build/rebuild on demand behind the scenes and always have cost of their own way. 
+
+To foresee the search criteria and resort to table scan in certain circumstance can minimize number of indexes. 
 
 - Change rate 
 
 
+
 - Lifespan 
+
 
 
 ### EOF (2024/08/02)
