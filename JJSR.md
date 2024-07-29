@@ -224,6 +224,9 @@ npm test -t json3
 
 
 #### VI. Introspection
+To fetch 100 posts from json-server is around 3 seconds, ie. 30 ms per post, total time is linear to number of posts. This is obvious in `fetch` and `myFetch`. 
+
+However, in `hisFetch` the first round is from json-server, all other nine rounds are from Redis, this significant reduce the retrieval time. 
 
 
 #### VII. Bibliography 
@@ -255,7 +258,7 @@ Lastly, knowing the data distribution is helpful in implementing *faceted search
 
 - Access pattern
 
-In what ways the data is retrieved. In a Products table, there are `color`, `size` and `productOf` fields, to enable access to products via all combinations of keys, ie. 3P1 + 3P2 + 3P3, which is 15! As you can see the number of compound index increase exponential... 
+In what ways the data is retrieved. In a Products table, there are `color`, `size` and `productOf` fields, to enable access to products via all combinations of keys, ie. 3P1 + 3P2 + 3P3 = 3 + 6 + 6 = 15! As you can see the number of compound index increase exponential... 
 
 Indexes are disk files and required to build/rebuild on demand behind the scenes and always have cost of their own way. 
 
