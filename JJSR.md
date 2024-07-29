@@ -228,6 +228,10 @@ To fetch 100 posts from json-server is around 3 seconds, ie. 30 ms per post, tot
 
 However, in `hisFetch` the first round is from json-server, all other nine rounds are from Redis, this significant reduce the retrieval time. 
 
+![alt cache1](img/cache1.JPG)
+
+![alt cache1](img/cache1.JPG)
+
 
 #### VII. Bibliography 
 1. [Up & Running with JSON Server (Part 1)](https://www.youtube.com/watch?v=mAqYJF-yxO8)
