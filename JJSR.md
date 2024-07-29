@@ -252,7 +252,7 @@ To foresee the search criteria and resort to table scan in certain circumstance 
 
 The update frequency. Some tables are updated more frequently than the others. Even in a Persons table, `birthday` field rarely changes; `name` and `sex` fields seldom change; `marital status` and `mobile` change from time to time. 
 
-[Tablespaces](https://dev.mysql.com/doc/refman/8.4/en/innodb-tablespace.html) in RDBMS is about managing storage and physical placement of tables. 
+[Tablespaces](https://dev.mysql.com/doc/refman/8.4/en/innodb-tablespace.html) in RDBMS is all about managing storage and physical placement of tables. 
 
 All data are equal, but some data are more equal than others. 
 
