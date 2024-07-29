@@ -132,7 +132,7 @@ export { myFetch }
 Redis is a in-memory key-value store and well known for: 
 1. Database cache 
 2. Session store
-3. Game leader board
+3. Game leaderboard
 4. Rate limiter 
 5. Distributed messaging system
 
