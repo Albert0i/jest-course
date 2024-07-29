@@ -102,6 +102,8 @@ http://localhost:3000/api
 
 
 #### II. myFetch
+We slightly wrap the Javascript [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) to make it ready for subsequent retrofit. 
+
 myFetch.js
 ```
 function myFetch(url, options) {
@@ -127,6 +129,13 @@ export { myFetch }
 
 
 #### III. Redis 
+Redis is a in-memory key-value store and well known for: 
+1. Database cache 
+2. Session store
+3. Game leader board
+4. Rate limiter 
+5. Distributed messaging system
+
 To start the Redis Server:
 ```
 npm run redis
@@ -151,6 +160,8 @@ export { redisClient, disconnect }
 
 
 #### IV. hisFetch 
+Further enhancement is to add cache capability. 
+
 hisFetch.js
 ```
 import { redisClient } from "./config/redisClient.js"
@@ -194,6 +205,8 @@ export { hisFetch }
 
 
 #### V. The metrics
+Use jest to test: 
+
 ```
 npm test -t json1
 ```
