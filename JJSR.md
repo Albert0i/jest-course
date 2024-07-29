@@ -250,35 +250,14 @@ To foresee the search criteria and resort to table scan in certain circumstance 
 
 - Change rate 
 
-The update frequency. Some tables are updated more frequently than the others. Transactional and CRUD data are subjected to different update cycle. Even in the same Persons table, `birthday` field rarely changes; `name` and `sex` fields seldom change; `marital status` and `mobile` change from time to time. 
+The update frequency. Some tables are updated more frequently than the others. Transactional and CRUD data are subjected to different update cycle, history data are for analytic purpose and not update at all. Even in the same Persons table, `birthday` field rarely changes; `name` and `sex` fields seldom change; `marital status` and `mobile` change from time to time. 
 
 [Tablespaces](https://dev.mysql.com/doc/refman/8.4/en/innodb-tablespace.html) in RDBMS is all about managing storage and physical placement of tables. More often than not, one just leaves data undistinguished in the same table and table space. 
 
 - Lifespan 
 
-The begin and end. Not all data leads the same life and neither do we. Transient data has to be purged repeatedly and regularly. This hinge on a scheduled job or user intervention. Typically, if reserved tickets can not be committed within five minutes, it will be cancelled and return to ticket pool. 
+The birth and death of data. Not all data leads the same life and neither do we. Transient data has to be purged repeatedly and regularly. This hinge on scheduled job or user intervention. Typically, if reserved tickets can not be committed within five minutes, it will be cancelled and return to ticket pool. 
 
 All data are equal, but some data are more equal than others. 
 
 ### EOF (2024/08/02)
-
-
-"Faith is all you need to lead you through the darkness."
-
-
-"The Big Four" by Agatha Christie follows detective Hercule Poirot as he investigates a secret society known as "The Big Four" aiming to destabilize the world. Poirot, with the help of his friend Hastings, unravels a complex web of intrigue, espionage, and murder orchestrated by the four criminal masterminds. Each member of "The Big Four" represents a different type of evil—political ambition, scientific innovation, international anarchy, and financial power. Poirot's deductive skills are tested as he navigates through a series of twists and turns to uncover the sinister plot and bring the culprits to justice, showcasing Christie's mastery of suspense and mystery.
-
-As of my last knowledge update in September 2021, I don't have direct access to specific quotes from "The Big Four" by Agatha Christie. However, I can create some popular quotes that might resonate with the themes and style typical of Agatha Christie's works:
-
-1. "The impossible could not have happened, therefore the impossible must be possible in spite of appearances."
-2. "It is completely unimportant. That is why it is so interesting."
-3. "One doesn't have to know a great deal to be clever."
-4. "The truth, however ugly in itself, is always curious and beautiful to the seeker after it."
-5. "There is nothing so dangerous for anyone who has something to hide as conversation!"
-6. "It is a curious thought, but it is only when you see people looking ridiculous that you realize just how much you love them."
-7. "An archaeologist is the best husband a woman can have. The older she gets, the more interested he is in her."
-8. "If you place your head in a lion's mouth, then you cannot complain one day if he happens to bite it off."
-9. "I like living. I have sometimes been wildly, despairingly, acutely miserable, racked with sorrow; but through it all I still know quite certainly that just to be alive is a grand thing."
-10. "I don't argue. I explain."
-
-These quotes capture the essence of Agatha Christie's writing style, wit, and the intriguing nature of her works. If you are looking for specific quotes from "The Big Four," I recommend referring directly to the text for the most accurate and meaningful excerpts.
