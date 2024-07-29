@@ -258,7 +258,7 @@ All data are equal, but some data are more equal than others.
 
 - Lifespan 
 
-The begin and end. 
+The begin and end. Not all data leads the same life and neither we do. Transient data has to be purged from time to dime. This hinge on a scheduled job or user intervention. Typically, if reserved tickets can not be committed within five minutes, it will be cancelled and return to ticket pool. 
 
 
 ### EOF (2024/08/02)
