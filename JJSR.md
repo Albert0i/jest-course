@@ -236,7 +236,7 @@ But there is no such thing as Data Propensity! It is a term *coined* by myself t
 
 The discrepant value of a field. ie. *male*, *female* in `gender` field; *cotton*, *linen*, *nylon*, *polyester* in `material` field. Typically a separate lookup table would be setup to prevent directly storing the value in a RDBMS table. While in NoSQL database, it is encouraged to store the value amid the main document, ie. *data to be used together should be stored together* so that no subsequent joining or lookup is necessary. 
 
-While table joining is an operation too important to be neglected and as yet it is an expensive operation, therefore secondary index is created although it is not mandatory to do so. 
+While table joining is an operation too important to be neglected and as yet it is an expensive operation, and therefore secondary index is created although it is not mandatory to do so. 
 
 Lastly, knowing the data distribution is a must in implementing *faceted search* in Redis. 
 
