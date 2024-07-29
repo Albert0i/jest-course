@@ -228,13 +228,22 @@ npm test -t json3
 
 A small talk on Data Propensity
 
-First of all, there is no such thing as Data Propensity! The term is *coined* by myself to indicate data distribution, access pattern, change rate, data lifespan and more... 
+[Data mining](https://dictionary.cambridge.org/dictionary/english-chinese-traditional/data-mining) is the process of using special software to look at large amounts of computer data in order to find out useful information, for example what types of product a company's customers buy. 
+
+But there is no such thing as Data Propensity! It is a term *coined* by myself to indicate data distribution, access pattern, change rate, data lifespan and more. 
 
 - Data distribution 
+The discrepant value of a field. ie. male, female in `gender` field; cotton, linen, nylon, polyester in `material` field. Typically a separate lookup table would be setup to prevent directly storing the value in a RDBMS table. While in NoSQL database, it is encouraged to store the value amid the main document, ie. *data to be used together should be stored together* so that no subsequent joining or lookup is necessary. 
+
+While table joining is an operation too important to be neglected and as yet it is an expensive operation, therefore secondary index is created although it is not mandatory to do so. 
+
+Knowing the data distribution is a must in implementing *faceted search* in Redis. 
 
 - Access pattern
 
+
 - Change rate 
+
 
 - Lifespan 
 
