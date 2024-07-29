@@ -226,8 +226,23 @@ npm test -t json3
 
 #### Epilogue
 
+A small talk on Data Propensity
+
+First of all, there is no such thing as Data Propensity! This term is *coined* by myself to indicate: data distribution, access pattern, change rate, lifespan and more... 
+
+- Data distribution 
+
+- Access pattern
+
+- Change rate 
+
+- Lifespan 
+
 
 ### EOF (2024/08/02)
+
+"Faith is all you need to lead you through the darkness."
+"All entries are equal, but some entries are more equal than others", 
 
 "The Big Four" by Agatha Christie follows detective Hercule Poirot as he investigates a secret society known as "The Big Four" aiming to destabilize the world. Poirot, with the help of his friend Hastings, unravels a complex web of intrigue, espionage, and murder orchestrated by the four criminal masterminds. Each member of "The Big Four" represents a different type of evil—political ambition, scientific innovation, international anarchy, and financial power. Poirot's deductive skills are tested as he navigates through a series of twists and turns to uncover the sinister plot and bring the culprits to justice, showcasing Christie's mastery of suspense and mystery.
 
