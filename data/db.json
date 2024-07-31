@@ -602,15 +602,9 @@
     },
     {
       "userId": 11,
-      "title": "Post title (101)",
-      "body": "Post body (101)",
+      "title": "Post title (101 updated)",
+      "body": "Post body (101 updated)",
       "id": 101
-    },
-    {
-      "userId": 11,
-      "title": "Post title (103)",
-      "body": "Post body (103)",
-      "id": 103
     }
   ]
 }

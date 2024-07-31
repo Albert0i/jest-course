@@ -1,0 +1,10 @@
+
+IMAGE_NAME=albert0i/jest-course
+
+IMAGE_VERSION=1.0
+
+CONFIG_DIR=D:\jest-course
+
+REDIS=redis:7.2.4-nanoserver-20H2
+
+COMPOSE_CONVERT_WINDOWS_PATHS=0
