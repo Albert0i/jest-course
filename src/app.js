@@ -2,6 +2,8 @@ import express from 'express';
 import jsonServer from 'json-server';
 import swaggerUi from 'swagger-ui-express';
 import YAML from 'yamljs'
+import cron from 'node-cron'
+import { ping } from './ping.js'
 
 const port = 3000;
 
@@ -22,6 +24,11 @@ app.use('/api', server);
 // set up Swagger UI in the root 
 const swaggerDocument = YAML.load('./src/swagger.yaml')
 app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+
+// Ping Redis every five seconds 
+cron.schedule('*/5 * * * * *', async () => {    
+    console.log(new Date(), await ping());
+  });
 
 // Start the combined server
 app.listen(port, () => {

@@ -233,7 +233,17 @@ However, in `hisFetch` the first round is from json-server, all other nine round
 ![alt cache1](img/cache1.JPG)
 
 
-#### VII. Bibliography 
+#### VII. Last touch
+To ping Redis at an interval of five seconds using [node-cron](https://www.npmjs.com/package/node-cron). 
+```
+// Ping Redis every five seconds 
+cron.schedule('*/5 * * * * *', async () => {    
+    console.log(new Date(), await ping());
+  });
+```
+
+
+#### VIII. Bibliography 
 1. [Up & Running with JSON Server (Part 1)](https://www.youtube.com/watch?v=mAqYJF-yxO8)
 2. [Up & Running with JSON Server (Part 2)](https://www.youtube.com/watch?v=VF3TI4Pj_kM)
 3. [{JSON} Placeholder](https://jsonplaceholder.typicode.com/)
