@@ -14,7 +14,7 @@ COPY package.json /app
 RUN curl.exe -o node-v18.16.1-win-x64.zip -L https://nodejs.org/dist/v18.16.1/node-v18.16.1-win-x64.zip && \
     tar.exe -xf node-v18.16.1-win-x64.zip && \
     DEL node-v18.16.1-win-x64.zip &&\
-    npm install
+    npm install --production
 
 COPY src /app/src
 #COPY data /app/data
