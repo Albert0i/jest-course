@@ -256,9 +256,9 @@ An [albert0i/jest-course](https://hub.docker.com/repository/docker/albert0i/jest
 4. [JavaScript Testing with Jest – Crash Course](https://youtu.be/IPiUDhwnZxA)
 5. [Jest API](https://jestjs.io/docs/api)
 6. [OpenAPI 3.0 Tutorial| Swagger Tutorial For Beginners | Design REST API Using Swagger Editor](https://youtu.be/mViFmjcDOoA)
+7. [OpenAPI Specification, Version 3.1.0](https://swagger.io/specification/)
 8. [Scheduling Tasks in Node.js | Cron Jobs in Real Projects](https://youtu.be/6gmdFPlkuhQ)
 9. [node-cron](https://www.npmjs.com/package/node-cron)
-9. [OpenAPI Specification, Version 3.1.0](https://swagger.io/specification/)
 10. [THE BIG FOUR](https://www.gutenberg.org/files/70114/70114-h/70114-h.htm)
 
 
