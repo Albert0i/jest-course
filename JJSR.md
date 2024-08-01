@@ -243,7 +243,13 @@ cron.schedule('*/5 * * * * *', async () => {
 ```
 
 
-#### VIII. Bibliography 
+#### VIII. Wrap up 
+An [albert0i/jest-course](https://hub.docker.com/repository/docker/albert0i/jest-course/general) image has been created so that one can run the whole bunch of things in a confined docker environment. 
+
+![alt make help](img/make.JPG)
+
+
+#### IX. Bibliography 
 1. [Up & Running with JSON Server (Part 1)](https://www.youtube.com/watch?v=mAqYJF-yxO8)
 2. [Up & Running with JSON Server (Part 2)](https://www.youtube.com/watch?v=VF3TI4Pj_kM)
 3. [{JSON} Placeholder](https://jsonplaceholder.typicode.com/)
