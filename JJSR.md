@@ -8,7 +8,7 @@
 #### Prologue 
 Real world issues become increasingly complicated when multiple parties are involved. While tools are envisaged and applied ingeniously to solve problem of a kind independently, combining and working together is quite another thing. 
 
-The idea here is to showcase the tying up of packages. 
+The idea here is to showcase the tying up of tools. 
 
 
 #### I. Server setup 
